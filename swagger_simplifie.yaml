@@ -1,0 +1,56 @@
+openapi: 3.0.0
+info:
+  title: Ma super messagerie
+  version: "1.0"
+paths:
+  /messages:
+    get:
+      summary: Retourne la liste des messages
+      responses:
+        '200':
+          description: Liste de messages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/message'
+    post:
+      summary: Envoie un nouveau message
+      requestBody:
+        $ref: '#/components/requestBodies/messageBody'
+      responses:
+         '200':
+            description: OK
+
+components:
+  schemas:
+    message:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Identifiant (unique) du message
+        emetteur:
+          type: string
+          description: Pseudo de l'emetteur du message
+        contenu:
+          type: string
+          description: Contenu du message
+  
+  requestBodies:
+    messageBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              emetteur:
+                type: string
+                description: Pseudo de l'emetteur du message
+              contenu:
+                type: string
+                description: Contenu du message
+            example:
+              emetteur: quentin
+              contenu: Hello world
