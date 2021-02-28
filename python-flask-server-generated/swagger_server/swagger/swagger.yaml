@@ -1,0 +1,144 @@
+openapi: 3.0.0
+info:
+  title: Ma super messagerie
+  version: "1.0"
+servers:
+- url: /
+paths:
+  /register:
+    post:
+      summary: Inscrire un nouvel utilisateur
+      operationId: register_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/utilisateur'
+      responses:
+        "200":
+          description: OK
+      x-openapi-router-controller: swagger_server.controllers.default_controller
+  /messages:
+    get:
+      summary: Retourne la liste des messages
+      operationId: messages_get
+      responses:
+        "200":
+          description: Liste de messages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/message'
+                x-content-type: application/json
+      x-openapi-router-controller: swagger_server.controllers.default_controller
+    post:
+      summary: Envoie un nouveau message
+      operationId: messages_post
+      requestBody:
+        $ref: '#/components/requestBodies/messageBody'
+      responses:
+        "200":
+          description: OK
+      x-openapi-router-controller: swagger_server.controllers.default_controller
+  /reactions:
+    get:
+      summary: Lister les reactions emojis d'un message
+      operationId: reactions_get
+      parameters:
+      - name: messageId
+        in: query
+        description: Identifiant du message
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+      responses:
+        "200":
+          description: Liste des emojis
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/reactionEmoji'
+                x-content-type: application/json
+      x-openapi-router-controller: swagger_server.controllers.default_controller
+    post:
+      summary: Réagir avec une emoji à un message
+      operationId: reactions_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/body'
+      responses:
+        "200":
+          description: OK
+      x-openapi-router-controller: swagger_server.controllers.default_controller
+components:
+  schemas:
+    message:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Identifiant (unique) du message
+        emetteur:
+          type: string
+          description: Pseudo de l'emetteur du message
+        contenu:
+          type: string
+          description: Contenu du message
+      example:
+        emetteur: emetteur
+        id: 0
+        contenu: contenu
+    utilisateur:
+      type: object
+      properties:
+        pseudo:
+          type: string
+          description: Pseudo de l'utilisateur
+        mdp:
+          type: string
+          description: Mot de passe de l'utilisateur
+    reactionEmoji:
+      type: string
+      description: Identifiant de l'emoji
+      enum:
+      - thumbsUp
+      - thumbsDown
+      - joy
+      - sad
+    body:
+      type: object
+      properties:
+        emoji:
+          $ref: '#/components/schemas/reactionEmoji'
+        messageId:
+          type: integer
+          description: Identifiant du message
+  requestBodies:
+    messageBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              emetteur:
+                type: string
+                description: Pseudo de l'emetteur du message
+              contenu:
+                type: string
+                description: Contenu du message
+              mdp:
+                type: string
+                description: Mot de passe (optionel) pour vérifier l'envoyeur
+            example:
+              emetteur: quentin
+              contenu: Hello world
+              mdp: 'optionel: mon super mot de pase'
+
