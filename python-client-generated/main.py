@@ -16,4 +16,5 @@ message = Message(contenu="Hello world", emetteur="Quentin")
 api.messages_post(body=message)
 
 messages = api.messages_get()
-print(messages)
+for msg in messages:
+    print(msg)
