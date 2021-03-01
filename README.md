@@ -6,6 +6,27 @@
 - Fichier swagger: [swagger.yaml](swagger.yaml)
 - Exemple 
 
+## Instructions générales
+
+L'objectif, c'est simplement de faire des requêtes 
+sur le petit service de messagerie que l'on vous a présenté.
+
+Il y a 3 manières de faire ce TP:
+- faire des requêtes en ligne de commande
+- faire des requêtes HTTP brut avec Python
+- utiliser un client API Python
+
+Chaque approche a son intérêt, n'hésitez pas à varier les plaisirs ;)
+
+**Pour aller plus loin:** nous avons rajouté la notion de message "vérifié".
+
+En faisant une requête supplémentaire d'inscription, 
+vous pourrez obtenir le status "vérifié" sur vos messages.
+
+Cette instruction vous pourrait vague ? 
+Rien de mieux qu'interagir avec l'API et de regarder ses spécifications
+pour mieux comprendre ;)
+
 ## Visualiser les spécifications
 
 1. Aller sur https://editor.swagger.io/
