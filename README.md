@@ -2,9 +2,9 @@
 
 ## Liens utiles
 
-- URL: https://messagerie.tech/messages
-- Fichier swagger: [swagger.yaml](swagger.yaml)
-- Exemple 
+- URL de la messagerie: https://messagerie.tech/messages
+- TODO FIXME Fichier swagger: [swagger.yaml](https://raw.githubusercontent.com/16pierre/info_1A/main/swagger_simplifie.yaml)
+- Editeur Swagger en ligne: https://editor.swagger.io/
 
 ## Instructions générales
 
