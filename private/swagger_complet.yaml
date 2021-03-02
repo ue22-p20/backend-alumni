@@ -1,15 +1,15 @@
 openapi: 3.0.0
 info:
   title: Ma super messagerie
-  version: "1.0"
+  version: '1.0'
 paths:
   /register:
     post:
       summary: Inscrire un nouvel utilisateur
       requestBody:
         content:
-          application/json:    
-            schema:            
+          application/json:
+            schema:
               $ref: '#/components/schemas/utilisateur'
       responses:
         '200':
@@ -31,18 +31,18 @@ paths:
       requestBody:
         $ref: '#/components/requestBodies/messageBody'
       responses:
-         '200':
-            description: OK
+        '200':
+          description: OK
   /reactions:
     get:
-      summary: "Lister les reactions emojis d'un message"
+      summary: Lister les reactions emojis d'un message
       parameters:
-      - in: query
-        name: messageId
-        schema:
-          type: integer
-        required: true
-        description: Identifiant du message
+        - in: query
+          name: messageId
+          schema:
+            type: integer
+          required: true
+          description: Identifiant du message
       responses:
         '200':
           description: Liste des emojis
@@ -53,10 +53,10 @@ paths:
                 items:
                   $ref: '#/components/schemas/reactionEmoji'
     post:
-      summary: "Réagir avec une emoji à un message"
+      summary: Réagir avec une emoji à un message
       requestBody:
         content:
-          application/json:    
+          application/json:
             schema:
               type: object
               properties:
@@ -66,10 +66,12 @@ paths:
                 messageId:
                   type: integer
                   description: Identifiant du message
+                emetteur:
+                  type: string
+                  description: Pseudo de l'emetteur du message
       responses:
         '200':
           description: OK
-
 components:
   schemas:
     message:
@@ -84,7 +86,6 @@ components:
         contenu:
           type: string
           description: Contenu du message
-        
     utilisateur:
       type: object
       properties:
@@ -97,8 +98,11 @@ components:
     reactionEmoji:
       type: string
       description: Identifiant de l'emoji
-      enum: ["thumbsUp", "thumbsDown", "joy", "sad"]
-  
+      enum:
+        - "+1"
+        - "-1"
+        - "coeur"
+        - "rire"
   requestBodies:
     messageBody:
       content:
@@ -118,4 +122,7 @@ components:
             example:
               emetteur: quentin
               contenu: Hello world
-              mdp: "optionel: mon super mot de pase"
+              mdp: 'optionel: mon super mot de pase'
+servers:
+  - url: 'https://messagerie.tech'
+    variables: {}

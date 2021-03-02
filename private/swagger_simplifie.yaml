@@ -54,3 +54,6 @@ components:
             example:
               emetteur: quentin
               contenu: Hello world
+servers:
+  - url: 'https://messagerie.tech'
+    variables: {}
