@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-git clone git@github.com:ue22/backend-alumni.git
+git clone https://github.com/ue22/backend-alumni.git
 cd backend-alumni/python-client-generated
 python3 -m pip install -r requirements.txt
 ```
