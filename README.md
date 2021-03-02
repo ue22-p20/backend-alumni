@@ -46,17 +46,17 @@ Une commande classique pour faire des requetes HTTP: `curl`
 
 ```
 # Pour faire un get:
-curl https://messageries.tech/messages
+curl https://messagerie.tech/messages
 
 
 # Pour faire un post:
-curl -d '{"parametre1": "valeur", "parametre2": "valeur2"}' https://messageries.tech/messages
+curl -d '{"parametre1": "valeur", "parametre2": "valeur2"}' https://messagerie.tech/messages
 
 # Remarque: pour afficher les résultats JSON de maniere plus sympa,
 # une commande tres utile c'est "jq":
-curl https://messageries.tech/messages | jq -r '.'
+curl https://messagerie.tech/messages | jq -r '.'
 
 # et pour pas se faire spammer, on peut utiliser "less"
-curl https://messageries.tech/messages | jq -r '.' | less
+curl https://messagerie.tech/messages | jq -r '.' | less
 ```
 
