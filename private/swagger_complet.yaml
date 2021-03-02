@@ -118,11 +118,11 @@ components:
                 description: Contenu du message
               mdp:
                 type: string
-                description: Mot de passe (optionel) pour vérifier l'envoyeur
+                description: Mot de passe (optionnel) pour vérifier l'envoyeur
             example:
               emetteur: quentin
               contenu: Hello world
-              mdp: 'optionel: mon super mot de pase'
+              mdp: 'optionnel: mon super mot de pase'
 servers:
   - url: 'https://messagerie.tech'
     variables: {}
