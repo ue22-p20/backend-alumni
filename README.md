@@ -3,7 +3,7 @@
 ## Liens utiles
 
 - URL de la messagerie: https://messagerie.tech/messages
-- Fichier swagger: [swagger.yaml](https://raw.githubusercontent.com/ue22/backend-alumni/main/private/swagger_simplifie.yaml)
+- Fichier swagger: [swagger.yaml](https://raw.githubusercontent.com/ue22/backend-alumni/main/private/swagger_complet.yaml)
 - Editeur Swagger en ligne: https://swagger.messagerie.tech/
 
 ## Instructions générales
