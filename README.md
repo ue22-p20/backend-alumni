@@ -3,8 +3,8 @@
 ## Liens utiles
 
 - URL de la messagerie: https://messagerie.tech/messages
-- TODO FIXME Fichier swagger: [swagger.yaml](https://raw.githubusercontent.com/16pierre/info_1A/main/swagger_simplifie.yaml)
-- Editeur Swagger en ligne: https://editor.swagger.io/
+- Fichier swagger: [swagger.yaml](https://raw.githubusercontent.com/ue22/backend-alumni/main/private/swagger_simplifie.yaml)
+- Editeur Swagger en ligne: https://swagger.messagerie.tech/
 
 ## Instructions générales
 
@@ -29,10 +29,7 @@ pour mieux comprendre ;)
 
 ## Visualiser les spécifications
 
-1. Aller sur https://editor.swagger.io/
-2. Cliquer sur "Import url"
-3. TODO(FIXME) Utilisez l'URL: `https://raw.githubusercontent.com/16pierre/info_1A/main/swagger_simplifie.yaml`
-
+Aller sur https://swagger.messagerie.tech
 
 ## Faire des requetes via Python (version HTTP brut)
 
