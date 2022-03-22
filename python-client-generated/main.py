@@ -7,12 +7,12 @@ from swagger_client.models.message import Message
 # Un peu de configuration, pas besoin de toucher
 
 config = Configuration()
-config.host = 'https://messagerie.tech/'
+config.host = 'http://supermessagerie.tech/'
 client = ApiClient(configuration=config)
 api = DefaultApi(api_client=client)
 
 # Code pour envoyer des requetes
-message = Message(contenu="Hello world", emetteur="Quentin")
+message = Message(contenu="Hello world", emetteur="Anonyme")
 api.messages_post(body=message)
 
 messages = api.messages_get()

@@ -1,7 +1,7 @@
 import requests
 import json
 
-req = requests.get("https://messagerie.tech/messages")
+req = requests.get("http://supermessagerie.tech/messages")
 
 print("Contenu brut: ")
 print(req.content)
