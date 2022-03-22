@@ -124,5 +124,5 @@ components:
               contenu: Hello world
               mdp: 'optionnel: mon super mot de pase'
 servers:
-  - url: 'https://messagerie.tech'
+  - url: 'http://supermessagerie.tech'
     variables: {}

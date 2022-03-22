@@ -55,5 +55,5 @@ components:
               emetteur: quentin
               contenu: Hello world
 servers:
-  - url: 'https://messagerie.tech'
+  - url: 'http://supermessagerie.tech'
     variables: {}
