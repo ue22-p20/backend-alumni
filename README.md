@@ -3,8 +3,7 @@
 ## Liens utiles
 
 - URL de la messagerie: http://supermessagerie.tech/messages
-- Fichier swagger: [swagger.yaml](https://raw.githubusercontent.com/ue22/backend-alumni/main/private/swagger_complet.yaml)
-- Editeur Swagger en ligne: https://editor.swagger.io (instructions ci-dessous)
+- Documentation Swagger de l'API en ligne: [swagger.io](https://editor.swagger.io/?url=https://raw.githubusercontent.com/ue22/backend-alumni/main/private/swagger_complet.yaml)
 
 ## Instructions générales
 
@@ -28,11 +27,6 @@ vous pourrez obtenir le status "vérifié" sur vos messages.
 Cette instruction vous pourrait vague ? 
 Rien de mieux qu'interagir avec l'API et de regarder ses spécifications
 pour mieux comprendre ;)
-
-## Swagger
-
-Allez sur https://editor.swagger.io, puis cliquez sur "File > Import Url" et copiez le lien suivant:
-"https://raw.githubusercontent.com/ue22/backend-alumni/main/private/swagger_complet.yaml"
 
 ## Faire des requetes via un terminal
 
